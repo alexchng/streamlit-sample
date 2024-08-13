@@ -8,4 +8,7 @@ services:
       - "8501:8501"
     environment:
       - LLMLITE_API_KEY=${LLMLITE_API_KEY}
+      - LLMLITE_BASE_URL=${LLMLITE_BASE_URL}
+    env_file:
+      - .env
     user: streamlit
