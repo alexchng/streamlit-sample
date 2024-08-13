@@ -1,0 +1,11 @@
+services:
+  cstack-chatbot-example:
+    image: wizztjh/cstack-chatbot-example:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    environment:
+      - LLMLITE_API_KEY=${LLMLITE_API_KEY}
+    user: streamlit
