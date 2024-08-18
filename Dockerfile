@@ -1,4 +1,6 @@
-FROM python:3.12.4-slim
+# FROM python:3.12.4-slim
+# updated to address potential Docker ratelimit for local builds
+FROM public.ecr.aws/docker/library/python:3.12.4-slim
 RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
